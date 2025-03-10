@@ -68,4 +68,5 @@ class JavaQuestionServiceTest {
 
         assertFalse(testJavaQuestionService.getAll().contains(question));
     }
+
 }

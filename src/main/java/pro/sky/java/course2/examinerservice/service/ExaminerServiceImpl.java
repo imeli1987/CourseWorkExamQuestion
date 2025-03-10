@@ -20,7 +20,6 @@ public class ExaminerServiceImpl implements ExaminerService{
         this.questionService = questionService;
     }
 
-    // получить список не повторяющихся вопросов в количестве amount
     @Override
     public Collection<Question> getQuestions( int amount ){
         if (amount <= 0 || amount > questionService.getAll().size()){
@@ -35,4 +34,5 @@ public class ExaminerServiceImpl implements ExaminerService{
         }
         return questions;
     }
+
 }

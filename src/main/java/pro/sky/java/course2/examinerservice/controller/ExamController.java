@@ -21,4 +21,5 @@ public class ExamController {
     public Collection<Question> getQuestions( @RequestParam int amount){
         return examinerService.getQuestions( amount );
     }
+
 }

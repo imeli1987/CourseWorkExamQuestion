@@ -37,6 +37,4 @@ class ExaminerServiceImplTest {
         assertEquals(3, questions.size());
     }
 
-
-
 }
