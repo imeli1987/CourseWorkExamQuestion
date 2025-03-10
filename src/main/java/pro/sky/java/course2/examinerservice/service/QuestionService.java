@@ -10,6 +10,7 @@ public interface QuestionService{
 
     void add( String question, String answer );
     void add( Question question );
+
     void remove( String question );
     void remove( Question question );
 
