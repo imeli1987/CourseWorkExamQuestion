@@ -20,6 +20,7 @@ public class JavaQuestionService implements QuestionService {
     public void add( String q, String a ) {
         questions.add( new Question(q, a) );
     }
+
     @Override
     public void add( Question question ) {
         questions.add( question );
