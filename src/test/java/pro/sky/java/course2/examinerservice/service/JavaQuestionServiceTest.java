@@ -74,3 +74,4 @@ class JavaQuestionServiceTest {
         assertFalse(testJavaQuestionRepository.getAll().contains(question));
     }
 }
+

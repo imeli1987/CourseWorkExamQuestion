@@ -30,3 +30,4 @@ public class JavaQuestionController{
         repository.remove( q );
     }
 }
+
