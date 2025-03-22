@@ -4,6 +4,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mock;
 import pro.sky.java.course2.examinerservice.domain.Question;
+import pro.sky.java.course2.examinerservice.repository.JavaQuestionRepository;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -12,17 +13,21 @@ class JavaQuestionServiceTest {
     @Mock
     private JavaQuestionService testJavaQuestionService;
 
+    @Mock
+    private JavaQuestionRepository testJavaQuestionRepository;
+
     @BeforeEach
     void setUp() {
         testJavaQuestionService = new JavaQuestionService();
+        testJavaQuestionRepository = new JavaQuestionRepository();
     }
 
     @Test
     void testGetAll() {
         Question testQuestion = new Question("Question", "Answer");
-        testJavaQuestionService.add(testQuestion);
+        testJavaQuestionRepository.add(testQuestion);
 
-        assertEquals(1, testJavaQuestionService.getAll().size());
+        assertEquals(1, testJavaQuestionRepository.getAll().size());
     }
 
     @Test
@@ -30,8 +35,8 @@ class JavaQuestionServiceTest {
 
         Question testQuestion1 = new Question("Question 1", "Answer 1");
         Question testQuestion2 = new Question("Question 2", "Answer 2");
-        testJavaQuestionService.add(testQuestion1);
-        testJavaQuestionService.add(testQuestion2);
+        testJavaQuestionRepository.add(testQuestion1);
+        testJavaQuestionRepository.add(testQuestion2);
 
         Question randomQuestion = testJavaQuestionService.getRandomQuestion();
 
@@ -43,30 +48,30 @@ class JavaQuestionServiceTest {
     void testAddQuestion() {
         Question question = new Question("Test question", "Test answer");
 
-        testJavaQuestionService.add(question);
+        testJavaQuestionRepository.add(question);
 
-        assertTrue(testJavaQuestionService.getAll().contains(question));
+        assertTrue(testJavaQuestionRepository.getAll().contains(question));
     }
 
     @Test
     void testRemoveQuestion() {
         Question question = new Question("Test", "Test");
 
-        testJavaQuestionService.add(question);
+        testJavaQuestionRepository.add(question);
 
-        testJavaQuestionService.remove(question);
+        testJavaQuestionRepository.remove(question);
 
-        assertFalse(testJavaQuestionService.getAll().contains(question));
-        assertEquals(0, testJavaQuestionService.getAll().size());
+        assertFalse(testJavaQuestionRepository.getAll().contains(question));
+        assertEquals(0, testJavaQuestionRepository.getAll().size());
     }
 
     @Test
     void testRemoveNonExistentQuestion() {
         Question question = new Question("Test question", "Test answer");
 
-        testJavaQuestionService.remove(question);
+        testJavaQuestionRepository.remove(question);
 
-        assertFalse(testJavaQuestionService.getAll().contains(question));
+        assertFalse(testJavaQuestionRepository.getAll().contains(question));
     }
 
 }
