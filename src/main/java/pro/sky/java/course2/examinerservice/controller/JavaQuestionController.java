@@ -29,5 +29,4 @@ public class JavaQuestionController{
     public void removeQuestion( @RequestParam String q ){
         repository.remove( q );
     }
-
 }

@@ -27,5 +27,4 @@ public class Question {
                 ", number=" + number + '\'' +
                 '}';
     }
-
 }
