@@ -10,7 +10,7 @@ import pro.sky.java.course2.examinerservice.repository.MathQuestionRepository;
 import java.util.Collection;
 
 @RestController
-@RequestMapping("exam/math")
+@RequestMapping ("exam/math")
 public class MathQuestionController{
 
     private MathQuestionRepository repo = new MathQuestionRepository();

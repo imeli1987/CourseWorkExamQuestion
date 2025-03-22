@@ -33,7 +33,7 @@ public class ExaminerServiceImpl implements ExaminerService{
         ArrayList<Question> questions = new ArrayList<>();
         while (questions.size() < amount){
             Question question = questionService.getRandomQuestion();
-            if (!questions.contains(question) && question != null){
+            if ( !questions.contains(question) && question != null){
                 questions.add(question);
             }
         }

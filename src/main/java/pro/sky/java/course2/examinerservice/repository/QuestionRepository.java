@@ -12,5 +12,5 @@ public interface QuestionRepository {
     void remove( String question );
     void remove( Question question );
 
-    Collection<Question> getAll();
+    Collection<Question> getAll ();
 }

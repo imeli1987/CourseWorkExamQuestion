@@ -10,7 +10,7 @@ import pro.sky.java.course2.examinerservice.repository.JavaQuestionRepository;
 import java.util.Collection;
 
 @RestController
-@RequestMapping("exam/java")
+@RequestMapping ("exam/java")
 public class JavaQuestionController{
 
     private JavaQuestionRepository repository = new JavaQuestionRepository();

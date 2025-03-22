@@ -36,7 +36,6 @@ class MathQuestionServiceTest{
         questions.add( question2 );
 
         assertEquals( 2, questions.size() );
-
     }
 
     @Test

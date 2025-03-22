@@ -43,6 +43,6 @@ public class MathQuestionService implements QuestionService, QuestionRepository{
 
     @Override              // Возвращает случайный вопрос
     public Question getRandomQuestion() {
-        return new ArrayList<>( mathQuestions ).get(random.nextInt( mathQuestions.size() ));
+        return new ArrayList<>( mathQuestions ).get( random.nextInt( mathQuestions.size() ));
     }
 }

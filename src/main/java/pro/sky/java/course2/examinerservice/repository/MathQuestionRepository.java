@@ -16,7 +16,7 @@ public class MathQuestionRepository implements QuestionRepository{
 
     @Override              // Добавляет вопрос в коллекцию
     public void add( String q, String a ) {
-        questions.add( new Question(q, a) );
+        questions.add( new Question( q, a) );
     }
 
     @Override

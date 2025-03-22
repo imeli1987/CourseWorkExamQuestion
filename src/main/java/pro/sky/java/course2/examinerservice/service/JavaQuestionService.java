@@ -15,7 +15,6 @@ public class JavaQuestionService implements QuestionService{
     public Question getRandomQuestion() {
         return new ArrayList<>(questions).get(random.nextInt( questions.size() ));
     }
-
 }
 
 

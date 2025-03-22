@@ -27,7 +27,7 @@ class ExaminerServiceImplTest {
     void setUp() {
         mathQuestionRepository = new MathQuestionRepository();
         javaQuestionRepository = new JavaQuestionRepository();
-        examinerServiceImpl = new ExaminerServiceImpl(javaQuestionService, mathQuestionService );
+        examinerServiceImpl = new ExaminerServiceImpl( javaQuestionService, mathQuestionService );
     }
 
     @Test
